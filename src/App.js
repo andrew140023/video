@@ -170,7 +170,7 @@ function App() {
                 ref={player}
                 className='react-player'
                 width={w}
-                height={h}
+                height={"100%"}
                 url={url}
                 pip={pip}
                 playing={playing}
