@@ -8,7 +8,7 @@ import screenfull from 'screenfull'
 import Duration from './Duration'
 
 function App() {
-  const my_url = "https://www.youtube.com/watch?v=5N4w6Fizfcw"
+  const my_url = "https://youtu.be/IvtMu8DxR0A"
   const [state,setState] = useState({
     url: my_url,
     pip: false,
