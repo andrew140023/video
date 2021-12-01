@@ -8,7 +8,9 @@ import screenfull from 'screenfull'
 import Duration from './Duration'
 
 function App() {
-  const my_url = "https://youtu.be/IvtMu8DxR0A"
+  let url_list = ["https://youtu.be/IvtMu8DxR0A","https://youtu.be/mgHR0FMnDU8"];
+  const [my_url,setmy_url] = useState(url_list[0]);
+  console.log(my_url)
   const [state,setState] = useState({
     url: my_url,
     pip: false,
@@ -198,6 +200,16 @@ function App() {
             <table>
             <tbody>
               <tr>
+                <th>Sources</th>
+                <td>
+                <ul class="actions">
+                  <li><button className={url_list[0]==my_url?"primary":""} onClick={()=>{setmy_url(url_list[0]);setState({...state,playing:false,url:url_list[0]})}}>介紹台灣</button></li>
+                  <li><button className={url_list[1]==my_url?"primary":""} onClick={()=>{setmy_url(url_list[1]);setState({...state,playing:false,url:url_list[1]}) }}>台大景點介紹</button></li>
+                  
+                </ul>
+                </td>
+              </tr>
+              <tr>
                 <th>Controls</th>
                 <td>
                 <ul class="actions">
@@ -211,7 +223,7 @@ function App() {
                 <div class="col-6 col-12-small">
                       <input type="checkbox" id="controls" checked={controls} onChange={handleToggleControls} />
                       <label for="controls">build-in control bar</label>
-                    </div>
+                </div>
                 
                 </td>
               </tr>
