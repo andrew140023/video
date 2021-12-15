@@ -8,7 +8,7 @@ import screenfull from 'screenfull'
 import Duration from './Duration'
 
 function App() {
-  let url_list = ["https://youtu.be/mgHR0FMnDU8","https://youtu.be/IvtMu8DxR0A"];
+  let url_list = ["https://youtu.be/IvtMu8DxR0A","https://youtu.be/IvtMu8DxR0A"];
   const [my_url,setmy_url] = useState(url_list[0]);
   console.log(my_url)
   const [state,setState] = useState({
