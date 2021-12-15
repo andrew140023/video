@@ -8,7 +8,7 @@ import screenfull from 'screenfull'
 import Duration from './Duration'
 
 function App() {
-  let url_list = ["https://youtu.be/IvtMu8DxR0A","https://youtu.be/mgHR0FMnDU8"];
+  let url_list = ["https://youtu.be/mgHR0FMnDU8","https://youtu.be/IvtMu8DxR0A"];
   const [my_url,setmy_url] = useState(url_list[0]);
   console.log(my_url)
   const [state,setState] = useState({
@@ -203,8 +203,8 @@ function App() {
                 <th>Sources</th>
                 <td>
                 <ul class="actions">
-                  <li><button className={url_list[0]==my_url?"primary":""} onClick={()=>{setmy_url(url_list[0]);setState({...state,playing:false,url:url_list[0]})}}>介紹台灣</button></li>
-                  <li><button className={url_list[1]==my_url?"primary":""} onClick={()=>{setmy_url(url_list[1]);setState({...state,playing:false,url:url_list[1]}) }}>台大景點介紹</button></li>
+                  <li><button className={url_list[0]==my_url?"primary":""} onClick={()=>{setmy_url(url_list[0]);setState({...state,playing:false,url:url_list[0]})}}>台大景點介紹</button></li>
+                  <li><button className={url_list[1]==my_url?"primary":""} onClick={()=>{setmy_url(url_list[1]);setState({...state,playing:false,url:url_list[1]}) }}>介紹台灣</button></li>
                   
                 </ul>
                 </td>
